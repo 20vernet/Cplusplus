@@ -29,16 +29,6 @@ bool verifyBorder( int* snake, const int nx, const int ny ){
 
 
 
-void update_snake_coordinates( int* snake, int& snl, int* dxdy ){
-  for(int i = snl-1; i>0; i--){
-    snake[i] = snake[i-1];
-    snake[SNAKE_LEN + i] = snake[SNAKE_LEN + i -1];
-  }
-  snake[0] = snake[0] + dxdy[0];
-  snake[SNAKE_LEN] = snake[SNAKE_LEN] + dxdy[1];
-}
-
-
 
 
 void startGame(const int& lap, const int& nx, const int& ny, int& snl, int* snake, int* bg){
