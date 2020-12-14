@@ -16,21 +16,6 @@
 
 
 
-
-
-bool verifyBorder( int* snake, const int nx, const int ny ){
-  int x = snake[0];
-  int y = snake[SNAKE_LEN];
-  if(x == 0 or x == nx-1 or y == 0 or y == ny-1){
-    return(false);
-  }
-  return(true);
-}
-
-
-
-
-
 void startGame(const int& lap, const int& nx, const int& ny, int& snl, int* snake, int* bg){
     char key;
     int dxdy[2] = {1,0};

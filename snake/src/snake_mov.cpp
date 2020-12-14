@@ -29,3 +29,12 @@ void update_snake_coordinates( int* snake, int& snl, int* dxdy ){
   snake[0] = snake[0] + dxdy[0];
   snake[SNAKE_LEN] = snake[SNAKE_LEN] + dxdy[1];
 }
+
+bool verifyBorder( int* snake, const int nx, const int ny ){
+  int x = snake[0];
+  int y = snake[SNAKE_LEN];
+  if(x == 0 or x == nx-1 or y == 0 or y == ny-1){
+    return(false);
+  }
+  return(true);
+}
